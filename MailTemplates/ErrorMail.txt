@@ -1,0 +1,9 @@
+Hi Team,
+
+Please find the error details regarding BOT_NAME RPA BOT's last run.
+Short_Description: SHORT_DES
+Detailed_Description: DETAIL_DES
+
+
+Thank you,
+BOT_NAME RPA BOT

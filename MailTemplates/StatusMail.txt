@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+</head>
+<body>
+<p>Hi Ops Team,</p>
+
+<p>Please review the attached and address the identified issue(s) for any failed transaction.</p>
+
+<p>Run Date: CurrentDateAndTime</p>
+
+<h3><u>Control totals:</u></h3>
+<table style="width:30%">
+  <tr>
+    <td>Total</td>
+    <td>T_Total</td>
+  </tr>
+ <tr>
+    <td>Success</td>
+    <td>T_Success</td>
+  </tr>
+    <tr>
+    <td>Error</td>
+    <td>T_Failed</td>
+  </tr>
+
+</table>
+</br>
+<p>Thank You,</p>
+<p>bot_name RPA BOT</p>
+
+</body>
+</html>

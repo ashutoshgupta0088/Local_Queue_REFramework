@@ -1,0 +1,11 @@
+﻿06/25/2021 22:24:08 : Config read successful
+06/25/2021 22:24:08 : Browser cookies and caches cleared Initializing applications now
+06/25/2021 22:24:09 : Killing all processes..
+06/25/2021 22:24:09 : Killing processes and closing bot.
+06/25/2021 22:24:15 : Processing transaction number 0
+06/25/2021 22:24:17 : Processing transaction number 1
+06/25/2021 22:24:18 : Processing transaction number 2
+06/25/2021 22:24:20 : Processing transaction number 3
+06/25/2021 22:24:29 : Execution status mail sent
+06/25/2021 22:24:29 : Closing applications...
+06/25/2021 22:24:29 : Killing processes and closing bot.

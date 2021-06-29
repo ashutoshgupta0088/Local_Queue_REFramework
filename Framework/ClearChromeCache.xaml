@@ -1,0 +1,121 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="ClearChromeCache" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="696,880" sap2010:WorkflowViewState.IdRef="ClearChromeCache_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="ClearChromeCache" sap:VirtualizedContainerService.HintSize="508.666666666667,815.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="466.666666666667,723.333333333333" sap2010:WorkflowViewState.IdRef="OpenBrowser_1">
+      <ui:OpenBrowser.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,620.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke ClearChromePopup workflow" sap:VirtualizedContainerService.HintSize="334,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Framework\ClearChromePopup.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <scg:Dictionary x:TypeArguments="x:String, Argument" />
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'chrome.exe New'" sap:VirtualizedContainerService.HintSize="334,117.333333333333" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="del" KeyModifiers="Ctrl, Shift" SpecialKey="True">
+              <ui:SendHotkey.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="bd02d1dd-13aa-4cc3-b094-0816bf215b48" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='New Tab - Google Chrome' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SendHotkey.Target>
+            </ui:SendHotkey>
+            <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'chrome.exe Settings'" sap:VirtualizedContainerService.HintSize="334,155.333333333333" sap2010:WorkflowViewState.IdRef="ClickImage_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:ClickImage.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:ClickImage.CursorPosition>
+              <ui:ClickImage.Image>
+                <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" InitialScalingFactor="1.5" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIYAAAA1CAYAAACEJ5NKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAS8SURBVHhe7Zw9axtJGMfvc6S6TxC4Rp/A/RVpkmvTpEtxcO4cAnbpKmDIVgkqhFGjQuAqAhd2YYwaG1ysC6G4iIxXloxPa60kP5mZ3Zmd1T56WXvZROj/wA/M7OxoXn47L2vZfxACwQTEQLABMRBsQAwEGxADwQbEQLCREqN66tPbL7f018drevHvD7BmyHGX42/E+N6d0OvPXTYzWD+MGH9/8tgMYD1RYlROBuxFsL4oMd44WEJAEiXGyw/YaIIkSgzuAlhvIAZggRiABWIAFogBWCAGYIEYgAViABaIAVggBmD5jcW4o6OBrB1R7/KOuf67sWr1nU/xYuz2qXY1pl6g+jCMwZjci3t6t23nXTMxakPqqbsndFRjrhdMoWKUROM7qvEzoj+kLSMHxPiVFCfG3oBcPUsMRlSrd2lDpm97tNUcRZ1C5F/dU0ndAzF+JYWJ8f5irJpNNKZGJX19p/UYXR/Rvpo15nS0Xo7CyyIeqdd5IMex8tj5rGXLl1JWb6x8Qtjomtu8o4YX1aMz78tLXXIurc8PJuLe//n6bt+ScyHET9RhTEeHt6kHIBmWIAvLyJ+CxLilRl+1h8jz6RWXpy6WmeCR/EA0uC7TZojhWDPPdARCKi2HPUOJ8GXZ0c+y00+/6e+gxGLIPCZminFNzpWVj4m4vkI03W4ZiToQtZvyC1J9JaNvtynqh0Z12TLs+uVDQWLEnb/8NMuJ4dG+3qQMhrSzG+YtlX0jgd8K825eTsIEMUPVypEE4sk78KJkI2hcNznztFs+fa336VO9F94zjRBYD0xPLHvhhvmGNs/Gcbqu78koShEi1vUsdROLFYg26HJnLSVZysiR1RJjz6e2SnkUT3wyvxFBCLNlpU+zlcqXrW7mfgro61NPUWawxQyn07LuMbgycmS1xDictYbYEXdUqXxPjc7U0VjHE8UwM1ZqSZwhhtzntGbUYVkxli0jR1ZLDPOURHsGFvEky7wVPz4ai/Xa7YwU7ajMZ4uR2oMw9d2+p3MzmBNqR3Vw+3qPsoQYWcrIkYLE6JtOW7z5lBtDmTZPjMXTrXMVZZUCWFP+c5cSe8ZIngjS9X1nncRq9okpw1KSqYwcKUgMe21edFwVHbAn0xgxyg9mFuhcpDeHG7t6cxbfO/1kP1eMeFO7eI9hb5TDzwopNfVgLxYjUxk5UpgYqRdcNS984na7tLP0Cy6PxG1RiJnFnONv6P2x7NgJnR/L49t13KFyaVFP2jW9+ibEMnV4mhgvKrGcvdb8U0niYaiGJ6ONyoDOtbT2oFa1GOIIehYfQTOVkSPFiSGQr8R149lY5pX4vPcY4rTiNkNZSmKjap/30xGQo8rMKIYQLB4sPkw5lkR8iMEu63Lv6DTRrmjmyFRGfhQqhsScFFSjwpBv8c7PMvwSjXmj2esHdFBPvuz553AYbzbV21GfNo/1TXrKziqGhHvzKeoUjaBdTqnqkzvQy6S45g3JqceD7Z7Ef+xVqj1Q27RJzhDZy8iLwsUAqwHEACwQA7BADMACMQALxAAsEAOwQAzAAjEAC8QALBADsCgx8M/ZwDRKDPw7RzCNEuPg7IG9CNYXJYYMzBrAxojhdsb05398JrBu/KCfe9Sftn89UKkAAAAASUVORK5CYII=" />
+              </ui:ClickImage.Image>
+              <ui:ClickImage.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="21098acc-b3e3-40d4-b022-f7dff56eca25" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Settings - Google Chrome' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:ClickImage.Target>
+            </ui:ClickImage>
+            <ui:KillProcess AppliesTo="{x:Null}" Process="{x:Null}" ContinueOnError="True" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="chrome" />
+          </Sequence>
+        </ActivityAction>
+      </ui:OpenBrowser.Body>
+      <ui:OpenBrowser.Url>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" Value="" />
+        </InArgument>
+      </ui:OpenBrowser.Url>
+    </ui:OpenBrowser>
+  </Sequence>
+</Activity>
